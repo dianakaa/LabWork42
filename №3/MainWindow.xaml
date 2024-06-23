@@ -1,0 +1,22 @@
+﻿<Window x:Class="_3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <MediaElement x:Name="mediaElement" Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="Fill" LoadedBehavior="Play" Source="video.mp4\e9xzaqaaaaa.mp4"/>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="1">
+            <Button Content="Play Sound" Click="PlaySystemSound_Click"/>
+            <Button Content="Play Audio File" Click="PlayAudioFile_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,30 @@
+﻿<Window x:Class="LabWork42.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LabWork42"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel Margin="10" VerticalAlignment="Top">
+        <InkCanvas x:Name="inkCanvas" Margin="0,0,0,10" Background="White" />
+
+         <Button x:Name="LoadImageButton" Content="Загрузить изображение" Click="LoadImageButton_Click" />
+            
+         <Label Content="Цвет пера:" />
+         <ComboBox x:Name="ColorComboBox" SelectionChanged="ColorComboBox_SelectionChanged">
+            <ComboBoxItem Content="Черный" Foreground="Black" />
+            <ComboBoxItem Content="Белый" Foreground="White" />
+            <ComboBoxItem Content="Красный" Foreground="Red" />
+            <ComboBoxItem Content="Оранжевый" Foreground="Orange" />
+            <ComboBoxItem Content="Желтый" Foreground="Yellow" />
+            <ComboBoxItem Content="Зеленый" Foreground="Green" />
+            <ComboBoxItem Content="Голубой" Foreground="LightBlue" />
+            <ComboBoxItem Content="Синий" Foreground="Blue" />
+            <ComboBoxItem Content="Фиолетовый" Foreground="Purple" />
+         </ComboBox>
+            
+         <Label Content="Размер пера:" />
+        <Slider x:Name="SizeSlider" Minimum="1" Maximum="10" TickFrequency="1" Value="3" ValueChanged="SizeSlider_ValueChanged"  />
+    </StackPanel>
+</Window>
